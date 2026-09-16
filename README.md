@@ -58,4 +58,4 @@ net zoals het vorige project hotelsimulator heb ik ook het .getignor bestand eri
 2. git add .  -Projectbestanden klaarzetten voor commit.
 3. git commit -m "Initial commit: projectstructuur aangemaakt" – Eerste commit vastleggen.
 4. git remote add origin https://github.com/Ferdous250/wpfw-opdracht-1.git – Remote koppelen.
-5. git push -u origin main – Uploaden van de bestanden naar de main-branch op GitHub.
+5. git push origin develop – Uploaden van de bestanden naar de main-branch op GitHub.
