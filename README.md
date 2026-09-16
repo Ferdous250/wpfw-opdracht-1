@@ -6,12 +6,17 @@
 **Datum:** September 2026  
 **Opleiding:** HBO ICT / SE3 - De Haagse Hogeschool
 
+**projectbeschrijving:**
+dit is mijn blog die ik maak doormiddel van de lessen en opdrachten. de komende weken komen steeds opdraachten bij waarbij de blog ook mee veranderd aan de hand van de casus en de opdrachten. 
+in de blog zelf staat wie ik ben en staat er wat ik heb geleerd en waarom ik het zo heb toegepast.
+
 
 ## 1. Projectstructuurr & ontwikkelomgeveing
 
 voor de realiastie van wat ik nu heb gedaan heb ik gebruik gemaakt van:
-* **Code Tool:** Visual Studio Code (VSC)
-* **Versiebeheer:** Github Repository: wpfw-opdracht-1
+* **Code Tool:** Visual Studio Code (VSC), hier maak ik dus gebruik van HTML5 en responsieve CSS3 code waarop de website is gemaakt.
+* **Versiebeheer:** Github Repository: hier sla ik mijn versies op door te commiten en te pushen. 
+wpfw-opdracht-1
 
 
 ## 2. Gebruikersscenario's (Criterium 3)
@@ -35,18 +40,20 @@ de repository heb ik zo opgebouwd volgens de opdracht en de oefeninggen
 ```text
 wpfw-opdracht-1/
 ├── css/
-│   └── style.css       # Centrale responsive stylesheet
+│   └── style.css       # hier word de opmaak van de website gemaakt
 ├── .gitignore          # Systeembestanden uitsluiten van versiebeheer
 ├── index.html          # Pagina 1: WhoAmI 
 ├── projecten.html      # Pagina 2: Projecten-overzicht
 ├── blog.html           # Pagina 3: Blog-overzicht
-└── README.md           # Projectdocumentatie & verantwoording
+└── README.md           # stukje projectdocumentatie en verantwoording
 ------------------------------------------------------------------------------
 
 Versiebeheer (Git) (dit schrijf ik ook voor mij zelf voor later)
 ik heb het project via git gekoppeld aan Github.
 net zoals het vorige project hotelsimulator heb ik ook het .getignor bestand erin gezet zodat Systeembestadnen worden uitgesloten tijdens het committen en pushen.
 
+
+(dit is even voor mij zelf gaat later weg)
 1. git init -opstartenb van de lokale repository
 2. git add .  -Projectbestanden klaarzetten voor commit.
 3. git commit -m "Initial commit: projectstructuur aangemaakt" – Eerste commit vastleggen.

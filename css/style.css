@@ -1,4 +1,4 @@
-/* ===== 1. Reset & box-model ===== */
+/* 1. Reset & box-model */
 *,
 *::before,
 *::after {
@@ -7,15 +7,15 @@
   padding: 0;
 }
 
-/* ===== 2. Basis & kleuren ===== */
+/* 2. basis en kleuren */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
-  color: #1a1a1a;
+  color: #131313;
   background-color: #ffffff;
 }
 
-h1, h2, h3 {
+h1, h2, h3 { /* voegt een kleur toe aan de headers */
   color: #1a1a2e;
   margin-bottom: 0.5em;
 }
@@ -25,28 +25,28 @@ p {
 }
 
 a {
-  color: #0056b3;
+  color: #242979;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+a:hover { /* voegt een onderstreping toe bij hover */
+  text-decoration: underline; 
 }
 
-/* ===== 3. Algemene layout-container ===== */
+/* 3. Algemene layout-container */
 main {
   max-width: 900px;
-  margin: 0 auto;   /* centreert de content horizontaal */
+  margin: 0 auto;  /* centreert de content horizontaal */
   padding: 1.5rem;
 }
 
-/* ===== 4. Header & navigatie ===== */
+/*4. Header & navigatie  */
 header {
   display: flex;
-  justify-content: space-between; /* naam links, nav rechts */
-  align-items: center;            /* verticaal centreren */
-  flex-wrap: wrap;                /* valt netjes terug op smalle schermen */
-  padding: 1rem 1.5rem;
+  flex-direction : column;
+  align-items: flex-start;
+  gap: 0.75rem; 
+  padding: 1rem 1.25rem; 
   background-color: #1a1a2e;
   color: #ffffff;
 }
@@ -55,19 +55,34 @@ header h1 {
   color: #ffffff;
   font-size: 1.5rem;
   margin-bottom: 0; /* overschrijft de margin-bottom van eerder */
+  grid-column: 1; /* staat in de eerste kolom */
+}
+
+nav {
+  grid-column: 2; /* staat in de middelste kolom, dus gecentreerd */
 }
 
 nav ul {
-  display: flex;        /* zet de li's naast elkaar */
+  display: flex;        /* zet de links naast elkaar */
   gap: 1.5rem;           /* ruimte tussen de links */
-  list-style: none;      /* verwijdert de bullet-points */
+  list-style: none;    
 }
 
 nav a {
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 500; /* maakt de tekst iets dikker */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* voegt een onderstreping toe bij hover */
+}
+
+/* 5. Header vanaf de tablet breedte */
+@media (min-width: 481px) { 
+  header {
+    display: grid; /* verandert de header naar een grid layout */
+    grid-template-columns: 1fr auto 1fr; /* drie kolommen: links, midden, rechts */
+    flex-direction: row; /* zet de header in een rij */
+    align-items: center; /* centreert de items verticaal */
+  }
 }
