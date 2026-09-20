@@ -26,7 +26,7 @@ om het ontwerp van de portofolio site op te bouwen, heb ik hier twee gebruikerss
 * **Gebruikersscenario 1 (Recruiter / Stagebegeleider):**  
   *Context:* Een recruiter bekijkt het portfolio via een mobiele telefoon tijdens een korte pauze.  
   *Behoefte:* Snel een overzicht krijgen van de identiteit, vaardigheden en uitgevoerde projecten van de student.  
-  *Oplossing in ontwerp:* Een duidelijke, responsive navigatie die op mobiele apparaten naast elkaar staan, en een directe link naar de projectenpagina op de Who Am I-pagina.
+  *Oplossing in ontwerp:* Een duidelijke, responsive navigatie die op mobiele apparaten onder elkaar staan, en een directe link naar de projectenpagina op de Who Am I-pagina.
 
 * **Gebruikersscenario 2 (Medestudent / Gastlezer):**  
   *Context:* Een medestudent zoekt op een laptop of desktop naar inhoudelijke kennis en artikelen over IT-onderwerpen.  
