@@ -1,6 +1,6 @@
 /* 1. Reset & box-model */
 *,
-*::before,
+*::before, 
 *::after {
   box-sizing: border-box; /* padding en border tellen niet meer op bij de breedte */
   margin: 0;
@@ -9,19 +9,19 @@
 
 /* 2. basis en kleuren */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  line-height: 1.6;
-  color: #131313;
+  font-family: "Segoe UI", Arial, sans-serif; /* een moderne, goed leesbare font */
+  line-height: 1.6; /* zorgt voor een betere leesbaarheid */
+  color: #131313; 
   background-color: #ffffff;
 }
 
 h1, h2, h3 { /* voegt een kleur toe aan de headers */
   color: #1a1a2e;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5em; /* voegt ruimte toe onder de headers */
 }
 
 p {
-  margin-bottom: 1em;
+  margin-bottom: 1em; /* voegt ruimte toe onder de paragrafen */
 }
 
 a {
@@ -40,32 +40,28 @@ main {
   padding: 1.5rem;
 }
 
-/*4. Header & navigatie  */
+/* 4. Header & navigatie  */
 header {
-  display: flex;
-  flex-direction : column;
-  align-items: flex-start;
+  display: flex; /* zet de naam en navigatie naast elkaar */
+  flex-direction : column; /* mobiel: de naam boven de navigatie */
+  align-items: flex-start; /* links uitlijnen */
   gap: 0.75rem; 
   padding: 1rem 1.25rem; 
   background-color: #1a1a2e;
   color: #ffffff;
 }
 
-header h1 {
+header h1 { /* de naam in de header: Ferdous Uddin */
   color: #ffffff;
   font-size: 1.5rem;
   margin-bottom: 0; /* overschrijft de margin-bottom van eerder */
-  grid-column: 1; /* staat in de eerste kolom */
-}
-
-nav {
-  grid-column: 2; /* staat in de middelste kolom, dus gecentreerd */
 }
 
 nav ul {
-  display: flex;        /* zet de links naast elkaar */
-  gap: 1.5rem;           /* ruimte tussen de links */
-  list-style: none;    
+  display: flex;             /* zet de links in één richting achter elkaar */
+  flex-direction: column;    /* mobiel: de links komen onder elkaar te staan */
+  gap: 0.5rem;               /* kleinere ruimte, want verticaal is 1.5rem te veel */
+  list-style: none;          /* haalt de opsommingstekens weg */
 }
 
 nav a {
@@ -77,12 +73,66 @@ nav a:hover {
   text-decoration: underline; /* voegt een onderstreping toe bij hover */
 }
 
-/* 5. Header vanaf de tablet breedte */
+/* 5. Who am I / Over mij - Basisregels (mobiel eerst) */
+.whoami-content { /* een container voor de foto en de tekst */
+  display: flex; /* zet de foto en de tekst naast elkaar */
+  flex-direction: column; /* mobiel: de foto boven de tekst */
+  gap: 1.5rem; /* foto en tekst onder elkaar op mobiel met 1.5rem ruimte */
+}
+
+/* 6. Media Query vanaf 481px (Tablet smal) */
 @media (min-width: 481px) { 
   header {
-    display: grid; /* verandert de header naar een grid layout */
-    grid-template-columns: 1fr auto 1fr; /* drie kolommen: links, midden, rechts */
-    flex-direction: row; /* zet de header in een rij */
-    align-items: center; /* centreert de items verticaal */
+    display: grid;                          /* vanaf tablet: drie kolommen */
+    grid-template-columns: 1fr auto 1fr;    /* links naam, midden nav, rechts leeg */
+    align-items: center;                    /* centreert verticaal */
+  }
+
+  header h1 { grid-column: 1; }             /* naam in de eerste kolom*/ 
+  nav       { grid-column: 2; }             /* navigatie in de middelste kolom */
+
+  nav ul {
+    flex-direction: row;                    /* vanaf 481px weer naast elkaar */
+    gap: 1.5rem;                            /* horizontaal mag de ruimte groter */
+  }
+}
+
+/* 7. Media Query vanaf 768px (Tablet) */
+@media (min-width: 768px) {
+
+  main { /* vergroot de padding van de main container voor tablets en groter */
+    padding: 2.5rem;
+  }
+
+  /* Zet de foto en de tekst naast elkaar */
+  .whoami-content {
+    flex-direction: row;
+    align-items: center; /* Lijn foto en tekst verticaal mooi in het midden uit */
+  }
+
+  /* Zorg dat de foto een nette vaste of maximale breedte heeft */
+  .whoami-content img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px; /* Optioneel: afgeronde hoeken */
+  }
+
+  /* Laat de tekst de overgebleven ruimte innemen */
+  .whoami-tekst { 
+    flex: 1;
+  }
+}
+
+/* 8. Media Query vanaf 1024px (Desktop) */
+@media (min-width: 1024px) {
+  /* Beperk de breedte van blogartikelen voor een optimale regellengte (50-75 tekens) */
+  article {
+    max-width: 65ch; /* 65 tekens breedte voor optimale leesbaarheid */
+  }
+
+  /* Verhoog de leesbaarheid op de blog */
+  article p {
+    font-size: 1.05rem; /* iets grotere tekst voor desktop */
+    line-height: 1.8; /* iets meer ruimte tussen de regels */
   }
 }
