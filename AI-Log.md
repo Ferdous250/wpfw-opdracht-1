@@ -12,6 +12,12 @@ gemini: **"hier is een stuk code die ik heb gemaakt de 3 teksten worden maar nie
 
 gemini: **"hoe kan ik een blauw balk zetten boven aan mijn pagina waar ik dan mijn naam en de 3 teksten kan neerzetten"** hiermee heb ik dus een blauwe balk boven aan mijn pagina gezet en ook hierbij heb ik getest of het goed mee schaalt.
 
+gemini: **"lees het document die ik je gestuurt heb ik heb daar onder elkaar woorden gezet met tekst, maak daarvan even een nette word document wat ik dan kan gaan invullen."** hiermee heb ik opzet van documenten gemaakt dus kopjes met daarbij wat er in de kopjes moet staan volgens de opdracht.
+
+claude: **"lees mijn code wat ik heb gemaakt, is dit op een goede manier gemaakt of kan het beter, als het beter kan geef aan waar het beter kan zonder code te geven."** hiermee gekeken of de code die ik heb netjes en op een goede manier is geschreven zo niet dat ik doormiddel van het antwoord terug kan kijken waar het beter kan.
+
+claude: **dit zijn alle punten waarop ik beoordeeld op word hier is mijn documenten en mijn code kijk voor controlle of ik alle criteriums en deliverables erin heb staan maak er een schema van wat af is en wat nog niet of beter kan"** ik heb zelf al een controle gedaan maar heb ook gekeken of ik misschien iets ben vergeten en met de antwoord terug gekeken of alles erbij staat.
+
 
 
 
