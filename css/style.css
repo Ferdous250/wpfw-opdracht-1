@@ -75,10 +75,10 @@ nav a:hover {
 }
 
 /* 5. Who am I / Over mij - Basisregels (mobiel eerst) */
-.whoami-content { /* een container voor de foto en de tekst */
-  display: flex; /* zet de foto en de tekst naast elkaar */
-  flex-direction: column; /* mobiel: de foto boven de tekst */
-  gap: 1.5rem; /* foto en tekst onder elkaar op mobiel met 1.5rem ruimte */
+.whoami-content {               /* een container voor de foto en de tekst */
+  display: flex;                /* zet de foto en de tekst naast elkaar */
+  flex-direction: column;       /* mobiel: de foto boven de tekst */
+  gap: 1.5rem;                  /* foto en tekst onder elkaar op mobiel met 1.5rem ruimte */
 }
 
 /* 6. Media Query vanaf 481px (Tablet smal) */
@@ -101,21 +101,21 @@ nav a:hover {
 /* 7. Media Query vanaf 768px (Tablet) */
 @media (min-width: 768px) {
 
-  main { /* vergroot de padding van de main container voor tablets en groter */
+  main {                                    /* vergroot de padding van de main container voor tablets en groter */
     padding: 2.5rem;
   }
 
   /* Zet de foto en de tekst naast elkaar */
   .whoami-content {
     flex-direction: row;
-    align-items: center; /* Lijn foto en tekst verticaal mooi in het midden uit */
+    align-items: center;                    /* Lijn foto en tekst verticaal mooi in het midden uit */
   }
 
   /* Zorg dat de foto een nette vaste of maximale breedte heeft */
   .whoami-content img {
     width: 250px;
     height: auto;
-    border-radius: 8px; /* Optioneel: afgeronde hoeken */
+    border-radius: 30px;                     /* afgeronde hoeken bij foto */
   }
 
   /* Laat de tekst de overgebleven ruimte innemen */

@@ -18,6 +18,8 @@ claude: **"lees mijn code wat ik heb gemaakt, is dit op een goede manier gemaakt
 
 claude: **dit zijn alle punten waarop ik beoordeeld op word hier is mijn documenten en mijn code kijk voor controlle of ik alle criteriums en deliverables erin heb staan maak er een schema van wat af is en wat nog niet of beter kan"** ik heb zelf al een controle gedaan maar heb ook gekeken of ik misschien iets ben vergeten en met de antwoord terug gekeken of alles erbij staat.
 
+claude **"ik heb mijn media query zo uitgevoerd is dit zo voldoende of mis ik iets op mijn pagina zie ik alles goed en schaalt allees goed"** hiermee gekeken of mijn code goed is geschreven en op een juiste manier.
+
 
 
 
