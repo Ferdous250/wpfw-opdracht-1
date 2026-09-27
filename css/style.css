@@ -54,18 +54,18 @@ header {
 header h1 { /* de naam in de header: Ferdous Uddin */
   color: #ffffff;
   font-size: 1.5rem;
-  margin-bottom: 0; /* overschrijft de margin-bottom van eerder */
+  margin-bottom: 0; /* verwijdert de standaard marge onder de h1 */
 }
 
 nav ul {
   display: flex;             /* zet de links in één richting achter elkaar */
   flex-direction: column;    /* mobiel: de links komen onder elkaar te staan */
   gap: 0.5rem;               /* kleinere ruimte, want verticaal is 1.5rem te veel */
-  list-style: none;          /* haalt de opsommingstekens weg */
+  list-style: none;          /* verwijdert de standaard opsommingstekens */
 }
 
 nav a {
-  display: block;
+  display: block; 
   padding: 0.75rem 1rem;
   color: #ffffff;
   font-weight: 500;
@@ -81,7 +81,73 @@ nav a:hover {
   gap: 1.5rem;                  /* foto en tekst onder elkaar op mobiel met 1.5rem ruimte */
 }
 
-/* 6. Media Query vanaf 481px (Tablet smal) */
+/* 6. Styling voor de weekblokken - Werkt nu op Mobiel, Tablet EN Desktop */
+.weken-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.week-card {
+  border: 2px solid #d93838; /* Rode rand */
+  border-radius: 6px;
+  overflow: hidden; 
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.week-header { 
+  width: 100%;
+  padding: 12px 15px;
+  background: #ffffff;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s ease;
+  box-sizing: border-box;
+}
+.week-header span:first-child {
+  flex: 1;                   /* tekst-span mag krimpen/wrappen */
+  min-width: 0;               /* voorkomt dat flex de container opblaast */
+}
+
+.week-header:hover {
+  background-color: #f5f5f5;
+}
+
+.week-content { 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease; /* animatie voor het openen/sluiten van de inhoud */
+  padding: 0 20px;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+/* Klasse die wordt toegevoegd met JS als een blok open is */
+.week-card.open .week-content {
+  padding: 15px 20px;
+  border-top: 1px solid #eeeeee;
+}
+
+.pijl { 
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.week-card.open .pijl {
+  transform: rotate(180deg);
+}
+
+/* 7. Media Query vanaf 481px (Tablet smal) */
 @media (min-width: 481px) { 
   header {
     display: grid;                          /* vanaf tablet: drie kolommen */
@@ -96,9 +162,14 @@ nav a:hover {
     flex-direction: row;                    /* vanaf 481px weer naast elkaar */
     gap: 1.5rem;                            /* horizontaal mag de ruimte groter */
   }
+
+    .week-header {
+    font-size: 1.2rem;      /* vanaf tablet weer groter */
+    padding: 15px 20px;
+  }
 }
 
-/* 7. Media Query vanaf 768px (Tablet) */
+/* 8. Media Query vanaf 768px (Tablet) */
 @media (min-width: 768px) {
 
   main {                                    /* vergroot de padding van de main container voor tablets en groter */
@@ -122,9 +193,8 @@ nav a:hover {
   .whoami-tekst { 
     flex: 1;
   }
-}
 
-/* 8. Media Query vanaf 1024px (Desktop) */
+/* 9. Media Query vanaf 1024px (Desktop) */
 @media (min-width: 1024px) {
   /* Beperk de breedte van blogartikelen voor een optimale regellengte (50-75 tekens) */
   article {
@@ -132,8 +202,9 @@ nav a:hover {
   }
 
   /* Verhoog de leesbaarheid op de blog */
-  article p {
+  article p { 
     font-size: 1.05rem; /* iets grotere tekst voor desktop */
     line-height: 1.8; /* iets meer ruimte tussen de regels */
   }
+}
 }
