@@ -15,14 +15,16 @@ Dit project vormt het fundament van mijn persoonlijke portfoliosite, opgebouwd t
 
 ## Mappenstructuur
 ```text
-wpfw-opdracht-1/
+wpfw-opdracht-2/
 ├── css/
 │   └── style.css       # Responsive styling en CSS3-variabelen
 ├── img/
 │   └── profielfoto.jpg # Profielfoto
+├── js/
+│   └── blog.js         # Dynamische logica en interactie voor de blog/reflecties
 ├── .gitignore          # Uitsluiten van systeembestanden
 ├── AI-Log.md           # Logboek AI-gebruik (AIAS-niveau 2)
 ├── blog.html           # Pagina 3: Blog-overzicht
-├── index.html          # Pagina 1: WhoAmI / Homepage
+├── index.html          # Pagina 1: WhoAmI / Homepage met contactformulier
 ├── projecten.html      # Pagina 2: Projecten-overzicht
-└── README.md           # Projectinformatie
+└── README.md           # Projectinformatie 
