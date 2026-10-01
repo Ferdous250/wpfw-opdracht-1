@@ -38,27 +38,62 @@
   <!-- Main: het hoofdgedeelte van de pagina met de belangrijkste inhoud -->
   <main>
     <!-- Sectie met het contactformulier -->
-    <section>
+    <section class="contact-sectie">
       <h2>Contact</h2>
+      <p>Heb je vragen of wil je samenwerken? Vul onderstaand formulier in.</p>
       
-      <form id="contact-form" class="contact-form">
-        <!-- E-mailadres invoerveld -->
-        <label for="email">E-mailadres</label>
-        <input type="email" id="email" name="email" autocomplete="email" required>
+      <!-- novalidate schakelt de standaard browser-validatie uit -->
+      <form id="contact-form" class="contact-form" novalidate>
+        
+        <!-- Veld 1: Naam -->
+        <div class="form-group">
+          <label for="naam">Naam <span class="verplicht-label">(verplicht)</span>:</label>
+          <input 
+            type="text" 
+            id="naam" 
+            name="naam" 
+            autocomplete="name"
+            aria-required="true"
+            aria-describedby="naam-fout" 
+            placeholder="Bijv. Ferdous Uddin"
+          >
+          <p id="naam-fout" class="fout-melding"></p>
+        </div>
 
-        <!-- Wachtwoord invoerveld -->
-        <label for="wachtwoord">Wachtwoord</label>
-        <input type="password" id="wachtwoord" name="wachtwoord" autocomplete="new-password" required>
+        <!-- Veld 2: E-mail -->
+        <div class="form-group">
+          <label for="email">E-mailadres <span class="verplicht-label">(verplicht)</span>:</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            autocomplete="email"
+            aria-required="true"
+            aria-describedby="email-fout" 
+            placeholder="naam@voorbeeld.nl"
+          >
+          <p id="email-fout" class="fout-melding"></p>
+        </div>
 
-        <!-- Vraag / Bericht tekstvak -->
-        <label for="vraag">Stel je vraag</label>
-        <textarea id="vraag" name="vraag" rows="6" required></textarea>
+        <!-- Veld 3: Bericht -->
+        <div class="form-group">
+          <label for="bericht">Bericht <span class="verplicht-label">(verplicht)</span>:</label>
+          <textarea 
+            id="bericht" 
+            name="bericht" 
+            rows="6" 
+            aria-required="true"
+            aria-describedby="bericht-fout" 
+            placeholder="Typ hier je bericht (minimaal 10 tekens)..."
+          ></textarea>
+          <p id="bericht-fout" class="fout-melding"></p>
+        </div>
 
         <!-- Verzendknop -->
-        <button type="submit">Verstuur</button>
+        <button type="submit" class="btn-submit">Verstuur</button>
         
         <!-- Bevestigings- / statusmelding na versturen -->
-        <p id="contact-melding" class="contact-melding" role="status"></p>
+        <p id="contact-melding" class="status-melding" role="status"></p>
       </form>
     </section>
   </main>
@@ -69,7 +104,7 @@
   </footer>
 
   <!-- JavaScript voor het verwerken van het contactformulier -->
-  <script src="js/contact.js"></script>
+  <script src="js/contact.js" defer></script>
 </body>
 
 </html>

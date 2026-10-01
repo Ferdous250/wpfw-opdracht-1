@@ -20,6 +20,11 @@ claude: **dit zijn alle punten waarop ik beoordeeld op word hier is mijn documen
 
 claude **"ik heb mijn media query zo uitgevoerd is dit zo voldoende of mis ik iets op mijn pagina zie ik alles goed en schaalt allees goed"** hiermee gekeken of mijn code goed is geschreven en op een juiste manier.
 
+claude: **"hier is mijn hele css code kun je even kopjes zetten wat met elkaar te maken heeft zodat het overzichtelijk is, maar veradner NIETS aan mijn eigen code en herschrijf ook niets anders"**   hiermee heb ik dus mijn css code wat overzichtelijker gemaakt voor mij zelf en natuurlijk ook gecontrolleerd of er echt niets veradnerd is en alles nog werkt.
+
+gemini **"kun je een voorbeeld geven van hoe je een simpele contactformulier kan maken in VSC met HTML, JAVASCRIPT en CSS waarmee ik kan oefenen"**  met het antwoord die ik terug kreeg en youtube video's heb ik geoefend met dit te maken.
+
+
 
 
 

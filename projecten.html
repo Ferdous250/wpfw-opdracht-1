@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- De pagina past zich aan aan het scherm van het apparaat -->
   <title>Projecten — Ferdous Uddin</title> <!-- De titel van de pagina die in het tabblad van de browser wordt weergegeven -->
   <link rel="stylesheet" href="css/style.css"> <!-- Link naar het CSS-bestand -->
+  <script src="js/projecten.js" defer></script>
 </head>
 <body> <!-- De inhoud van de pagina wordt hier weergegeven -->
   <header> <!-- De header van de pagina, bevat de naam en navigatiebalk -->
@@ -21,22 +22,47 @@
   <main> <!-- Het hoofdgedeelte van de pagina, bevat de belangrijkste inhoud -->
     <section> <!-- Een sectie waarin alle projecten worden verzameld -->
       <h2>Mijn Projecten</h2> <!-- Hoofdkop voor het projectenoverzicht -->
-      <p>Hieronder staat een overzicht per week waar ik aan heb gewerkt tijdens mijn studie Software Engineering.</p> <!-- Introductietekst -->
+      <p>Hieronder staat een overzicht van projecten waaraan ik heb gewerkt tijdens mijn studie Software Engineering.</p> <!-- Introductietekst -->
 
-      <!-- Project 1 -->
-      <article> <!-- Artikel-element voor een zelfstandig project -->
-        <h3>Portfolio Website (WPFW)</h3> <!-- Titel van het eerste project -->
-        <p>Een responsive portfolio-website opgebouwd met semantische HTML5 en CSS3, volgens de WCAG-richtlijnen en responsive design principes.</p> <!-- Beschrijving van het project -->
-        <p><strong>Gebruikte technieken:</strong> HTML5, CSS3, JavaScript, DOM, Git & GitHub Pages</p> <!-- Gebruikte technologieën -->
+      <!-- Bedieningspaneel: Zoeken, Filteren & Sorteren -->
+      <div class="controls-container">
+        <div class="control-group">
+          <label for="search-input">Zoeken:</label>
+          <input type="text" id="search-input" placeholder="Zoek op titel of techniek...">
+        </div>
 
-        <!-- Container waarin ik de dynamische weekblokken plaats(week 1, week 2 etc.) -->
-        <div id="weken-container" class="weken-container"></div>
-      </article> <!-- Einde van het eerste project -->
-    </section> <!-- Einde van de sectie met projecten -->
-  </main> <!-- Einde van het hoofdgedeelte -->
+        <div class="control-group">
+          <label for="category-filter">Categorie:</label>
+          <select id="category-filter">
+            <option value="all">Alle categorieën</option>
+            <option value="Web">Web Development</option>
+            <option value="Database">Database</option>
+            <option value="Applicatie">Applicatie</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="sort-select">Sorteren op:</label>
+          <select id="sort-select">
+            <option value="title-asc">Titel (A-Z)</option>
+            <option value="title-desc">Titel (Z-A)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Hier rendert JavaScript de dynamische cards -->
+      <div id="projecten-container" class="projecten-grid"></div>
+    </section>
+  </main>
+  
 
   <footer> <!-- De footer van de pagina, bevat informatie over de auteur en het jaartal -->
     <p>&copy; 2026 Ferdous Uddin</p> <!-- Een paragraaf met het copyright symbool en de naam van de auteur -->
+    <a href="contact.html" class="contact-knop" aria-label="Contact opnemen"> <!-- Knop naar het contactformulier -->
+      <img src="img/contactmail.png" alt=""> <!-- Envelop-icoon -->
+    </a>
   </footer> <!-- Einde van de footer -->
+
+  <script src="js/projecten.js"></script> <!-- Link naar het JavaScript-bestand (geplaatst net voor sluiten van body) -->
 </body> <!-- Einde van de inhoud van de pagina -->
 </html> <!-- Einde van het HTML-document -->

@@ -28,6 +28,14 @@
         </div>
       </div>
     </section> <!-- Einde van de sectie -->
+
+    <!-- Weerbericht widget (KNMI Data) -->
+    <section class="weer-widget" aria-live="polite"> 
+      <h2>Actueel Weer (KNMI)</h2>
+      <div id="weer-container" class="weer-inhoud">
+       <p id="weer-status" class="weer-status">Weergegevens laden...</p>
+     </div>
+    </section>
   </main> <!-- Einde van het hoofdgedeelte -->
 
   <footer> <!-- De footer van de pagina, bevat informatie over de auteur en het jaartal -->
@@ -36,6 +44,10 @@
       <img src="img/contactmail.png" alt=""> <!-- Envelop-icoon -->
     </a>
   </footer> <!-- Einde van de footer -->
+
+  <!-- JavaScript voor het weerbericht -->
+  <script src="js/weer.js" defer></script> 
+</body>
 
 </body> <!-- Einde van de inhoud van de pagina -->
 </html> <!-- Einde van het HTML-document -->
