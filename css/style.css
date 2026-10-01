@@ -84,15 +84,22 @@ nav a:hover {
   text-decoration: underline; /* voegt een onderstreping toe bij hover */
 }
 
-/* 4b. Footer - zelfde kleur als de header */
+/* 4b. Footer - zelfde kleur als de header, blijft onderaan beeld */
 footer {
-  padding: 1rem 1.25rem;
+  position: sticky;               /* blijft onderaan het scherm staan, ook als je scrolt */
+  bottom: 0;
+  z-index: 100;                   /* ligt boven de inhoud */
+  display: flex;                  /* copyright links, contactknop rechts */
+  justify-content: space-between;
+  align-items: center;            /* alles verticaal in het midden */
+  gap: 1rem;
+  padding: 0.5rem 1.25rem;
   background-color: #1a1a2e;
   color: #ffffff;
 }
 
 footer p {
-  margin-bottom: 0;        /* geen extra ruimte onder de tekst in de footer */
+  margin-bottom: 0;               /* geen extra ruimte onder de tekst in de footer */
 }
 
 /* 5. Who am I / Over mij - Basisregels (mobiel eerst) */
@@ -230,36 +237,29 @@ footer p {
   }
 }
 
-/* 10. Contactknop - blijft rechtsonder in beeld */
+/* 10. Contactknop - staat rechts in de footer en schaalt mee met het scherm */
 .contact-knop {
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  width: 56px;
-  height: 56px;
+  flex-shrink: 0;                 /* knop wordt nooit samengedrukt door de tekst */
+  width: clamp(40px, 9vw, 52px);  /* minimaal 40px, maximaal 52px, daartussen schaalt hij mee */
+  aspect-ratio: 1;                /* altijd rond */
   border-radius: 50%;
-  overflow: hidden;                /* Snijdt eventuele hoeken van de afbeelding netjes rond af */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;                    /* Zorgt dat de knop altijd boven de footer en inhoud zweeft */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ffffff;      /* witte rand, zodat de zwarte cirkel opvalt op de donkere footer */
   transition: transform 0.2s ease;
 }
 
 .contact-knop img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;               /* Zorgt dat het icoon mooi de cirkel vult zonder te vervormen */
-  display: block;
+  border-radius: 50%;
 }
 
 .contact-knop:hover {
-  transform: scale(1.1);           /* Wordt iets groter bij muisovergang */
+  transform: scale(1.1);          /* wordt iets groter bij hover */
 }
 
 .contact-knop:focus-visible {
-  outline: 3px solid #242979;      /* zichtbaar bij toetsenbordnavigatie */
+  outline: 3px solid #ffffff;     /* zichtbaar bij toetsenbordnavigatie */
   outline-offset: 3px;
 }
 
