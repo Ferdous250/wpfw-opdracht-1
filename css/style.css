@@ -8,11 +8,19 @@
 }
 
 /* 2. basis en kleuren */
+html {
+  background-color: #1a1a2e; /* zelfde kleur als header/footer, zodat er nooit een wit randje onder de footer zichtbaar is */
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif; /* een moderne, goed leesbare font */
   line-height: 1.6; /* zorgt voor een betere leesbaarheid */
   color: #131313; 
   background-color: #ffffff;
+  min-height: 100vh;       /* de pagina is minstens zo hoog als het scherm */
+  min-height: 100dvh;      /* op mobiel houdt dit rekening met de adresbalk van de browser */
+  display: flex;
+  flex-direction: column;  /* header, main en footer onder elkaar */
 }
 
 h1, h2, h3 { /* voegt een kleur toe aan de headers */
@@ -35,6 +43,8 @@ a:hover { /* voegt een onderstreping toe bij hover */
 
 /* 3. Algemene layout-container */
 main {
+  flex: 1;                 /* main neemt alle overgebleven ruimte, footer zakt naar onderen */
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;  /* centreert de content horizontaal */
   padding: 1.5rem;
@@ -72,6 +82,17 @@ nav a {
 }
 nav a:hover {
   text-decoration: underline; /* voegt een onderstreping toe bij hover */
+}
+
+/* 4b. Footer - zelfde kleur als de header */
+footer {
+  padding: 1rem 1.25rem;
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+footer p {
+  margin-bottom: 0;        /* geen extra ruimte onder de tekst in de footer */
 }
 
 /* 5. Who am I / Over mij - Basisregels (mobiel eerst) */
@@ -193,6 +214,7 @@ nav a:hover {
   .whoami-tekst { 
     flex: 1;
   }
+}
 
 /* 9. Media Query vanaf 1024px (Desktop) */
 @media (min-width: 1024px) {
@@ -206,4 +228,91 @@ nav a:hover {
     font-size: 1.05rem; /* iets grotere tekst voor desktop */
     line-height: 1.8; /* iets meer ruimte tussen de regels */
   }
+}
+
+/* 10. Contactknop - blijft rechtsonder in beeld */
+.contact-knop {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;                /* Snijdt eventuele hoeken van de afbeelding netjes rond af */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;                    /* Zorgt dat de knop altijd boven de footer en inhoud zweeft */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.contact-knop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;               /* Zorgt dat het icoon mooi de cirkel vult zonder te vervormen */
+  display: block;
+}
+
+.contact-knop:hover {
+  transform: scale(1.1);           /* Wordt iets groter bij muisovergang */
+}
+
+.contact-knop:focus-visible {
+  outline: 3px solid #242979;      /* zichtbaar bij toetsenbordnavigatie */
+  outline-offset: 3px;
+}
+
+/* 11. Contactformulier */
+.contact-form {
+  display: flex;
+  flex-direction: column;          /* velden onder elkaar */
+  gap: 0.5rem;
+  max-width: 600px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font: inherit;                   /* zelfde lettertype als de rest van de site */
+  border: 2px solid #1a1a2e;
+  border-radius: 6px;
+}
+
+.contact-form textarea {
+  resize: vertical;                /* alleen hoogte aanpasbaar, zodat de layout niet breekt */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 3px solid #242979;
+  outline-offset: 2px;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #1a1a2e;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #242979;
+}
+
+.contact-melding {
+  margin-top: 0.5rem;
+  font-weight: 600;
 }

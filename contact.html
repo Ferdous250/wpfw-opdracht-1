@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Hierdoor weet de browser dat het een HTML5-document is -->
+<html lang="nl">
+<!-- Inhoud van de pagina is in het Nederlands -->
+
+<head>
+  <!-- Hier komen de metagegevens van de pagina -->
+  <meta charset="UTF-8">
+  <!-- Tekens zoals letters en cijfers worden correct weergegeven -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- De pagina past zich aan aan het scherm van het apparaat -->
+  
+  <title>Contact — Ferdous Uddin</title>
+  <!-- De titel van de pagina die in het tabblad van de browser wordt weergegeven -->
+  
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Link naar het CSS-bestand -->
+</head>
+
+<body>
+  <!-- De inhoud van de pagina wordt hier weergegeven -->
+
+  <!-- Header: bevat de naam en navigatiebalk -->
+  <header>
+    <h1>Ferdous Uddin</h1>
+    
+    <!-- Navigatiebalk met links naar andere pagina's -->
+    <nav>
+      <ul>
+        <li><a href="index.html">WhoAmI</a></li>
+        <li><a href="projecten.html">Projecten</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main: het hoofdgedeelte van de pagina met de belangrijkste inhoud -->
+  <main>
+    <!-- Sectie met het contactformulier -->
+    <section>
+      <h2>Contact</h2>
+      
+      <form id="contact-form" class="contact-form">
+        <!-- E-mailadres invoerveld -->
+        <label for="email">E-mailadres</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+
+        <!-- Wachtwoord invoerveld -->
+        <label for="wachtwoord">Wachtwoord</label>
+        <input type="password" id="wachtwoord" name="wachtwoord" autocomplete="new-password" required>
+
+        <!-- Vraag / Bericht tekstvak -->
+        <label for="vraag">Stel je vraag</label>
+        <textarea id="vraag" name="vraag" rows="6" required></textarea>
+
+        <!-- Verzendknop -->
+        <button type="submit">Verstuur</button>
+        
+        <!-- Bevestigings- / statusmelding na versturen -->
+        <p id="contact-melding" class="contact-melding" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer: bevat copyright-informatie en auteur -->
+  <footer>
+    <p>&copy; 2026 Ferdous Uddin</p>
+  </footer>
+
+  <!-- JavaScript voor het verwerken van het contactformulier -->
+  <script src="js/contact.js"></script>
+</body>
+
+</html>
