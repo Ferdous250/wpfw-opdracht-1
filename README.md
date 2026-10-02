@@ -17,14 +17,24 @@ Dit project vormt het fundament van mijn persoonlijke portfoliosite, opgebouwd t
 ```text
 wpfw-opdracht-2/
 ├── css/
-│   └── style.css       # Responsive styling en CSS3-variabelen
+│   ├── base.css        # Reset, basisstijlen en hoofdcontainer (alle pagina's)
+│   ├── layout.css      # Header, navigatie en footer (alle pagina's)
+│   ├── home.css        # Stijl voor index.html
+│   ├── blog.css        # Stijl voor blog.html
+│   ├── projecten.css   # Stijl voor projecten.html
+│   └── contact.css     # Stijl voor contact.html
 ├── img/
+│   ├── contactmail.png # Icoon van de contactknop
 │   └── profielfoto.jpg # Profielfoto
 ├── js/
-│   └── blog.js         # Dynamische logica en interactie voor de blog/reflecties
+│   ├── blog.js         # Dynamische logica en interactie voor de blog/reflecties
+│   ├── contact.js      # Validatie en verwerking van het contactformulier
+│   ├── projecten.js    # Tonen, zoeken en filteren van projecten
+│   └── weer.js         # Weerwidget
 ├── .gitignore          # Uitsluiten van systeembestanden
 ├── AI-Log.md           # Logboek AI-gebruik (AIAS-niveau 2)
 ├── blog.html           # Pagina 3: Blog-overzicht
-├── index.html          # Pagina 1: WhoAmI / Homepage met contactformulier
+├── contact.html        # Pagina 4: Contactformulier
+├── index.html          # Pagina 1: WhoAmI / Homepage
 ├── projecten.html      # Pagina 2: Projecten-overzicht
-└── README.md           # Projectinformatie 
+└── README.md           # Projectinformatie

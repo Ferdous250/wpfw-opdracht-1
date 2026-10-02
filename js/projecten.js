@@ -3,14 +3,14 @@ const projectenData = [
   {
     id: 1,
     titel: "Avond4daagse",
-    beschrijving: "Een applicatie ter ondersteuning van de Avond4daagse inschrijvingen, routes en deelnemersbeheer.",
+    beschrijving: "Een applicatie voor de Avond4daagse met inschrijvingen, routes en deelnemersbeheer.",
     categorie: "Applicatie",
     technieken: ["HTML5", "CSS3", "JavaScript, documentatie"]
   },
   {
     id: 2,
     titel: "WPFW Opdrachten",
-    beschrijving: "Verzameling van opdrachten voor Web Programming Frameworks (WPFW) opgebouwd met responsive design en DOM-manipulatie.",
+    beschrijving: "Verzameling van opdrachten (6 totaal) voor Web Programming Frameworks (WPFW) opgebouwd met responsive design en DOM-manipulatie.",
     categorie: "Web",
     technieken: ["HTML5", "CSS3", "JavaScript", "DOM"]
   },

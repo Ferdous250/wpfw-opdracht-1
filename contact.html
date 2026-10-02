@@ -2,20 +2,17 @@
 <!-- Hierdoor weet de browser dat het een HTML5-document is -->
 <html lang="nl">
 <!-- Inhoud van de pagina is in het Nederlands -->
-
 <head>
   <!-- Hier komen de metagegevens van de pagina -->
   <meta charset="UTF-8">
   <!-- Tekens zoals letters en cijfers worden correct weergegeven -->
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- De pagina past zich aan aan het scherm van het apparaat -->
-  
   <title>Contact — Ferdous Uddin</title>
   <!-- De titel van de pagina die in het tabblad van de browser wordt weergegeven -->
-  
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Link naar het CSS-bestand -->
+  <link rel="stylesheet" href="css/base.css"> <!-- Link naar het CSS-bestanden -->
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
@@ -24,7 +21,6 @@
   <!-- Header: bevat de naam en navigatiebalk -->
   <header>
     <h1>Ferdous Uddin</h1>
-    
     <!-- Navigatiebalk met links naar andere pagina's -->
     <nav>
       <ul>
@@ -41,57 +37,51 @@
     <section class="contact-sectie">
       <h2>Contact</h2>
       <p>Heb je vragen of wil je samenwerken? Vul onderstaand formulier in.</p>
-      
       <!-- novalidate schakelt de standaard browser-validatie uit -->
       <form id="contact-form" class="contact-form" novalidate>
-        
         <!-- Veld 1: Naam -->
         <div class="form-group">
           <label for="naam">Naam <span class="verplicht-label">(verplicht)</span>:</label>
-          <input 
-            type="text" 
-            id="naam" 
-            name="naam" 
+          <input
+            type="text"
+            id="naam"
+            name="naam"
             autocomplete="name"
             aria-required="true"
-            aria-describedby="naam-fout" 
+            aria-describedby="naam-fout"
             placeholder="Bijv. Ferdous Uddin"
           >
           <p id="naam-fout" class="fout-melding"></p>
         </div>
-
         <!-- Veld 2: E-mail -->
         <div class="form-group">
           <label for="email">E-mailadres <span class="verplicht-label">(verplicht)</span>:</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
+          <input
+            type="email"
+            id="email"
+            name="email"
             autocomplete="email"
             aria-required="true"
-            aria-describedby="email-fout" 
+            aria-describedby="email-fout"
             placeholder="naam@voorbeeld.nl"
           >
           <p id="email-fout" class="fout-melding"></p>
         </div>
-
         <!-- Veld 3: Bericht -->
         <div class="form-group">
           <label for="bericht">Bericht <span class="verplicht-label">(verplicht)</span>:</label>
-          <textarea 
-            id="bericht" 
-            name="bericht" 
-            rows="6" 
+          <textarea
+            id="bericht"
+            name="bericht"
+            rows="6"
             aria-required="true"
-            aria-describedby="bericht-fout" 
+            aria-describedby="bericht-fout"
             placeholder="Typ hier je bericht (minimaal 10 tekens)..."
           ></textarea>
           <p id="bericht-fout" class="fout-melding"></p>
         </div>
-
         <!-- Verzendknop -->
         <button type="submit" class="btn-submit">Verstuur</button>
-        
         <!-- Bevestigings- / statusmelding na versturen -->
         <p id="contact-melding" class="status-melding" role="status"></p>
       </form>
@@ -101,6 +91,9 @@
   <!-- Footer: bevat copyright-informatie en auteur -->
   <footer>
     <p>&copy; 2026 Ferdous Uddin</p>
+    <a href="contact.html" class="contact-knop" aria-label="Contact opnemen"> <!-- Knop naar het contactformulier -->
+      <img src="img/contactmail.png" alt="ronde plaatje van contactmail"> <!-- Envelop-icoon -->
+    </a>
   </footer>
 
   <!-- JavaScript voor het verwerken van het contactformulier -->

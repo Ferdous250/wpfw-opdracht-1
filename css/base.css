@@ -1,0 +1,72 @@
+/* ==========================================
+   base.css - reset, basisstijlen en hoofdcontainer (op elke pagina)
+   ========================================== */
+
+/* ==========================================
+   1. Reset & Box-model
+   ========================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* padding en border tellen niet meer op bij de breedte */
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================
+   2. Basis & Kleuren
+   ========================================== */
+
+html {
+  background-color: #1a1a2e; /* zelfde kleur als header/footer, zodat er nooit een wit randje onder de footer zichtbaar is */
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif; /* een moderne, goed leesbare font */
+  line-height: 1.6;        /* zorgt voor een betere leesbaarheid */
+  color: #131313;
+  background-color: #ffffff;
+  min-height: 100vh;       /* de pagina is minstens zo hoog als het scherm */
+  min-height: 100dvh;      /* op mobiel houdt dit rekening met de adresbalk van de browser */
+  display: flex;
+  flex-direction: column;  /* header, main en footer onder elkaar */
+}
+
+h1, h2, h3 { /* voegt een kleur toe aan de headers */
+  color: #1a1a2e;
+  margin-bottom: 0.5em;  /* voegt ruimte toe onder de headers */
+}
+
+p {
+  margin-bottom: 1em;    /* voegt ruimte toe onder de paragrafen */
+}
+
+a {
+  color: #242979;
+  text-decoration: none;
+}
+
+a:hover { /* voegt een onderstreping toe bij hover */
+  text-decoration: underline;
+}
+
+/* ==========================================
+   3. Algemene Layout-container
+   ========================================== */
+
+main {
+  flex: 1;               /* main neemt alle overgebleven ruimte, footer zakt naar onderen */
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;        /* centreert de content horizontaal */
+  padding: 1.5rem;
+}
+
+
+/* Tablet (vanaf 768px): meer ruimte rond de hoofdinhoud */
+@media (min-width: 768px) {
+  main {
+    padding: 2.5rem;
+  }
+}
