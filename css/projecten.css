@@ -16,6 +16,8 @@
   border-radius: 8px;
   border: 1px solid #e0e0e0;
   margin-bottom: 2rem;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .control-group {
@@ -23,6 +25,7 @@
   flex-direction: column;
   gap: 0.35rem;
   flex: 1;
+  min-width: 0; /* Zorgt ervoor dat de flex-items niet groter worden dan hun container */
 }
 
 .control-group label {
@@ -39,6 +42,9 @@
   font-size: 0.95rem;
   background-color: #ffffff;
   outline: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .control-group input:focus,
@@ -80,9 +86,9 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+.project-card:hover { 
+  transform: translateY(-4px); /* lichte lift bij hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.50);  /* iets grotere schaduw bij hover */ 
 }
 
 .project-card h3 {

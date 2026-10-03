@@ -3,7 +3,7 @@
    ========================================== */
 
 /* ==========================================
-   1. Who am I / Over mij (mobiel eerst)
+   1. Who am I / Over mijj (mobiel eerst)
    ========================================== */
 
 .whoami-content {               /* een container voor de foto en de tekst */
@@ -23,7 +23,7 @@
   .whoami-content img {
     width: 250px;
     height: auto;
-    border-radius: 30px;                    /* afgeronde hoeken bij foto */
+    border-radius: 30px;                    /* afgereonde hoeken bij foto */
   }
 
   /* Laat de tekst de overgebleven ruimte innemen */
@@ -31,3 +31,60 @@
     flex: 1;
   }
 }
+
+/* ==========================================
+   2. Weer Styling op homepage (Open-Meteo API)
+   ========================================== */
+
+.weer-widget {
+  background-color: #f4f6f8;            /* lichte achtergrondkleur voor de widget */
+  border: 1px solid #dcdfe3;
+  border-radius: 8px;                     /* afgeronde hoeken voor de widget */
+  padding: 1rem 1.5rem;
+  max-width: 350px;
+  margin: 1.5rem 0;
+}
+
+.weer-widget h2 {
+  font-size: 1.1rem;                      /* iets kleinere koptekst voor de widget */
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #1a1a2e;
+}
+
+.weer-kaart {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weer-icoon {
+  font-size: 2.2rem;
+}
+
+.weer-temperatuur {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #1a1a2e;
+}
+
+.weer-beschrijving,
+.weer-locatie {
+  margin: 0;
+  color: #555555;
+  font-size: 0.95rem;
+}
+
+.weer-status {
+  font-style: italic;
+  color: #666;
+  margin: 0;
+}
+
+.weer-fout {
+  color: #c62828;
+  font-weight: bold;
+  margin: 0;
+}
+

@@ -5,7 +5,10 @@ const projectenData = [
     titel: "Avond4daagse",
     beschrijving: "Een applicatie voor de Avond4daagse met inschrijvingen, routes en deelnemersbeheer.",
     categorie: "Applicatie",
-    technieken: ["HTML5", "CSS3", "JavaScript, documentatie"]
+    technieken: ["HTML5", "CSS3", "JavaScript", "Documentatie"],
+    documenten: [
+      { titel: "Samenwerkingsovereenkomst", url: "docs/samenwerkingsovereenkomst.pdf" }
+    ]
   },
   {
     id: 2,
@@ -112,7 +115,7 @@ function filterAndSortProjecten() {
 
 // 4. Event Listeners koppelen
 searchInput.addEventListener("input", filterAndSortProjecten);
-categoryFilter.addEventListener("change", filterAndSortProjecten);
+categoryFilter.addEventListener("change", filterAndSortProjecten); 
 sortSelect.addEventListener("change", filterAndSortProjecten);
 
 // Eerste keer renderen bij laden van pagina
